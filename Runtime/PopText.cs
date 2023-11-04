@@ -62,12 +62,12 @@ namespace Com.A9.DmgPop
         public GameObject Text(string text, int text_size, Vector3 pos, Color col,  bool is_crit = false)
         {
             if (text == "")
-                return;
+               return null;
 
             GameObject go = Aquire(pos);
             if (go == null)
             {
-                return;
+                return null;
             }
 
             if (is_crit)
