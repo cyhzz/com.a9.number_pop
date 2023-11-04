@@ -58,7 +58,7 @@ namespace Com.A9.DmgPop
             released_list.Add(to_release);
         }
 
-        public void Text(string text, string obj, int text_size, Vector3 pos, Color col, Transform parent = null, bool is_crit = false)
+        public void Text(string text, int text_size, Vector3 pos, Color col, Transform parent = null, bool is_crit = false)
         {
             if (text == "")
                 return;
