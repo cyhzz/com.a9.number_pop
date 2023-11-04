@@ -11,16 +11,16 @@ namespace Com.A9.DmgPop
         public int max_count = 600;
         public GameObject num_text;
         public Transform grid;
+        public Vector3 hide_pos;
 
         public Dictionary<GameObject, GameObject> active_dic = new Dictionary<GameObject, GameObject>();
         public List<GameObject> released_list = new List<GameObject>();
 
         void Start()
         {
-            Vector3 hide = Vector3.one;
             for (int i = 0; i < max_count; i++)
             {
-                Aquire(hide);
+                Aquire(hide_pos);
             }
         }
 
