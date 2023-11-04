@@ -59,7 +59,7 @@ namespace Com.A9.DmgPop
             released_list.Add(to_release);
         }
 
-        public void Text(string text, int text_size, Vector3 pos, Color col,  bool is_crit = false)
+        public GameObject Text(string text, int text_size, Vector3 pos, Color col,  bool is_crit = false)
         {
             if (text == "")
                 return;
@@ -69,7 +69,6 @@ namespace Com.A9.DmgPop
             {
                 return;
             }
-            go.GetComponent<Animator>().Play("pop", 0, 0);
 
             if (is_crit)
             {
@@ -81,6 +80,7 @@ namespace Com.A9.DmgPop
             tmesh.fontSize = text_size;
 
             tmesh.color = col;
+            return go;
         }
     }
 }
