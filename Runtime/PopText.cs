@@ -10,6 +10,7 @@ namespace Com.A9.DmgPop
     {
         public const int max_count = 600;
         public GameObject num_text;
+        public Transform grid;
 
         public Dictionary<GameObject, GameObject> active_dic = new Dictionary<GameObject, GameObject>();
         public List<GameObject> released_list = new List<GameObject>();
@@ -19,7 +20,7 @@ namespace Com.A9.DmgPop
             Vector3 hide = Vector3.one;
             for (int i = 0; i < max_count; i++)
             {
-                Aquire(hide, null);
+                Aquire(hide);
             }
         }
 
@@ -29,7 +30,7 @@ namespace Com.A9.DmgPop
             released_list.Clear();
         }
 
-        GameObject Aquire(Vector3 pos, Transform parent)
+        GameObject Aquire(Vector3 pos)
         {
             GameObject to_alloc = null;
             if (released_list.Count != 0)
@@ -42,7 +43,7 @@ namespace Com.A9.DmgPop
             }
             else if (active_dic.Count < max_count)
             {
-                to_alloc = GameObject.Instantiate(num_text, pos, Quaternion.identity, parent);
+                to_alloc = GameObject.Instantiate(num_text, pos, Quaternion.identity, grid);
                 active_dic.Add(to_alloc, to_alloc);
                 to_alloc.GetComponentInChildren<Text>().enabled = true;
             }
@@ -58,12 +59,12 @@ namespace Com.A9.DmgPop
             released_list.Add(to_release);
         }
 
-        public void Text(string text, int text_size, Vector3 pos, Color col, Transform parent = null, bool is_crit = false)
+        public void Text(string text, int text_size, Vector3 pos, Color col,  bool is_crit = false)
         {
             if (text == "")
                 return;
 
-            GameObject go = Aquire(pos, parent);
+            GameObject go = Aquire(pos);
             if (go == null)
             {
                 return;
