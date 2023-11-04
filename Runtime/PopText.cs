@@ -8,7 +8,7 @@ namespace Com.A9.DmgPop
 {
     public class PopText : Singleton<PopText>
     {
-        public const int max_count = 600;
+        public int max_count = 600;
         public GameObject num_text;
         public Transform grid;
 
