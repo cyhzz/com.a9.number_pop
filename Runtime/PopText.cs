@@ -51,6 +51,15 @@ namespace Com.A9.DmgPop
             return to_alloc;
         }
 
+
+        public void ReleaseAll()
+        {
+            foreach (var item in active_dic)
+            {
+                Release(item.Value.GetComponent<TextDestroy>());
+            }
+        }
+
         public void Release(TextDestroy des)
         {
             GameObject to_release = active_dic[des.gameObject];
@@ -59,10 +68,10 @@ namespace Com.A9.DmgPop
             released_list.Add(to_release);
         }
 
-        public GameObject Text(string text, int text_size, Vector3 pos, Color col,  bool is_crit = false)
+        public GameObject Text(string text, int text_size, Vector3 pos, Color col, bool is_crit = false)
         {
             if (text == "")
-               return null;
+                return null;
 
             GameObject go = Aquire(pos);
             if (go == null)
