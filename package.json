@@ -1,11 +1,11 @@
 {
-  "name": "com.a9.dmg_pop",
+  "name": "com.a9.number_pop",
   "version": "1.0.1",
-  "description": "DmgPop",
+  "description": "NumberPop",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cyhzz/com.a9.dmg_pop.git"
+    "url": "https://github.com/cyhzz/com.a9.number_pop.git"
   },
   "author": "A9019",
   "keywords": [
@@ -13,8 +13,8 @@
     "editor"
   ],
   "dependencies": {
-    "com.a9.singleton":"1.0.1"
+    "com.a9.singleton": "1.0.1"
   },
-  "displayName": "A9 DmgPop",
+  "displayName": "A9 NumberPop",
   "unity": "2020.3"
 }

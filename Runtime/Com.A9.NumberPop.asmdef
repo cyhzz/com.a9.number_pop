@@ -1,8 +1,9 @@
 {
-    "name": "Com.A9.DmgPop",
+    "name": "Com.A9.NumberPop",
     "rootNamespace": "",
     "references": [
-        "GUID:8a65b104d2cf848c7a5178a1fe80efc4"
+        "GUID:8a65b104d2cf848c7a5178a1fe80efc4",
+        "GUID:d84c821083f524b39a0d9b19bccb4c09"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
